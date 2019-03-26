@@ -1,2 +1,2 @@
-# springboot-example
-Spring boot and other stuff
+# di-example
+An example of DI.
