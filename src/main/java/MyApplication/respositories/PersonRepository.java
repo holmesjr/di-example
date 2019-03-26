@@ -1,8 +1,11 @@
 package MyApplication.respositories;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class PersonRepository implements IPersonRepository {
     @Override
     public List<Person> findAll() {

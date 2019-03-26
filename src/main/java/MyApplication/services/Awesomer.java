@@ -2,12 +2,16 @@ package MyApplication.services;
 
 import MyApplication.respositories.IPersonRepository;
 import MyApplication.respositories.Person;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Awesomer {
     private final IPersonRepository personRepository;
 
+    @Autowired
     public Awesomer(IPersonRepository personRepository) {
 
         this.personRepository = personRepository;
