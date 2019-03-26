@@ -1,7 +1,6 @@
 package MyApplication;
 
-import MyApplication.respositories.PersonRepository;
-import MyApplication.services.Awesomer;
+import MyApplication.services.IAwesomer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +12,10 @@ import org.springframework.web.bind.annotation.*;
 public class Application {
 
 
-    private final Awesomer awesomer;
+    private final IAwesomer awesomer;
 
     @Autowired
-    public Application(Awesomer awesomer) {
+    public Application(IAwesomer awesomer) {
 
         this.awesomer = awesomer;
     }

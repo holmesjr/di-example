@@ -1,5 +1,5 @@
 import MyApplication.Application;
-import MyApplication.services.Awesomer;
+import MyApplication.services.IAwesomer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 public class ApplicationTest {
 
     @Mock
-    Awesomer awesomer;
+    IAwesomer awesomer;
 
     @Test
     public void callsTheAwesomerService(){

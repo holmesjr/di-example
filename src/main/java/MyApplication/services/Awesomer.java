@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class Awesomer {
+public class Awesomer implements IAwesomer {
     private final IPersonRepository personRepository;
 
     @Autowired
@@ -17,6 +17,7 @@ public class Awesomer {
         this.personRepository = personRepository;
     }
 
+    @Override
     public String makeEveryoneAwesome() {
         List<Person> people = personRepository.findAll();
         StringBuilder builder = new StringBuilder();
