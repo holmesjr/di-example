@@ -13,11 +13,7 @@ import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
 
-@RunWith(MockitoJUnitRunner.class)
 public class AwesomerTest {
-
-    @Mock
-    IPersonRepository mockRepo;
 
     @Test
     public void makesPeopleAwesome(){
@@ -25,9 +21,8 @@ public class AwesomerTest {
         List<Person> people = new ArrayList<>();
         people.add(new Person("FIRST","LAST"));
         people.add(new Person("FN","LN"));
-        Mockito.when(mockRepo.findAll()).thenReturn(people);
 
-        Awesomer awesomerService = new Awesomer(mockRepo);
-        assertEquals("FIRST LAST is awesome.\nFN LN is awesome.\n", awesomerService.makeEveryoneAwesome());
+        Awesomer awesomerService = new Awesomer();
+        assertEquals("FIRST LAST is awesome.\nFN LN is awesome.\n", awesomerService.makeEveryoneAwesome(people));
     }
 }
